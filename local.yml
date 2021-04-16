@@ -1,0 +1,6 @@
+- hosts: localhost
+  become: true
+  tasks:
+    - name: "Print a greeting"
+      debug:
+        msg: "Hello world"
