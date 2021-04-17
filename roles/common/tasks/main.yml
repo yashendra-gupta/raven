@@ -31,4 +31,3 @@
 - name: install extensions
   command: 'sudo code --user-data-dir="~/.vscode-root" --install-extension {{ item }}'
   loop: "{{ vs_code_extensions }}"
-  when: item not in installed_extensions.stdout
