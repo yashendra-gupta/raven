@@ -28,5 +28,5 @@
   register: installed_extensions
 
 - name: install extensions
-  command: code --install-extension redhat.vscode-yaml
+  command: sudo code --user-data-dir="~/.vscode-root" --install-extension redhat.vscode-yaml
   become: yes
