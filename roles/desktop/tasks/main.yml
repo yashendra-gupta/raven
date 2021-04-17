@@ -5,7 +5,8 @@
 
 # Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)
 - name: Install virtual box guest additions
-  apt: name={{item}}
+  apt: 
+    name: "{{item}}"
     install_recommends: no
   with_items:
     - virtualbox-guest-dkms
