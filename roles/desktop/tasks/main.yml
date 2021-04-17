@@ -1,10 +1,10 @@
-tasks:
-    - name: "Install GNOME desktpo(ubuntu-desktop)"
-      apt: name="ubuntu-desktop"
-    - name: "Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)"
-      apt: name={{item}}
-      install_recommends: no
-      with_items:
-        - virtualbox-guest-dkms
-        - virtualbox-guest-utils
-        - virtualbox-guest-x11
+- name: "Install GNOME desktpo(ubuntu-desktop)"
+  apt: name="ubuntu-desktop"
+
+- name: "Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)"
+  apt: name={{item}}
+  install_recommends: no
+  with_items:
+    - virtualbox-guest-dkms
+    - virtualbox-guest-utils
+    - virtualbox-guest-x11
