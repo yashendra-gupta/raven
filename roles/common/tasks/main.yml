@@ -19,5 +19,5 @@
 
 - name: install extensions
   become: true
-  command: "sudo code --user-data-dir=~/root --install-extension {{ item }}"
+  command: "sudo --user-data-dir=~/root code --install-extension {{ item }}"
   loop: "{{ vs_code_extensions }}"
