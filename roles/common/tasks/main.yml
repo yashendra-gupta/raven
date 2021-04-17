@@ -17,12 +17,6 @@
     state: present
     update_cache: true
 
-- name: get list of installed extensions
-  become: true
-  command: "sudo code --user-data-dir=~/root --list-extensions"
-  changed_when: False
-  register: installed_extensions
-
 - name: install extensions
   become: true
   command: "sudo code --user-data-dir=~/root --install-extension {{ item }}"
