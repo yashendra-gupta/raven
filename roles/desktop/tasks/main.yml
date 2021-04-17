@@ -1,3 +1,4 @@
+---
 - name: "Install GNOME desktpo(ubuntu-desktop)"
   apt: name="ubuntu-desktop"
 
