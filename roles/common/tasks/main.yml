@@ -25,7 +25,6 @@
 
 - name: get list of installed extensions
   command: 'sudo code --user-data-dir="~/.vscode-root" --list-extensions'
-  changed_when: False
   register: installed_extensions
 
 - name: install extensions
