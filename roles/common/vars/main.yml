@@ -9,3 +9,4 @@ vs_code_extensions:
   - donjayamanne.githistory
   - redhat.vscode-yaml
   - asciidoctor.asciidoctor-vscode
+  - visualstudioexptteam.vscodeintellicode
