@@ -4,3 +4,5 @@
     - name: "Print a greeting"
       debug:
         msg: "Hello world"
+  roles:
+    - desktop
