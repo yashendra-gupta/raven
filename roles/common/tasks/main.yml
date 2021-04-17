@@ -28,5 +28,4 @@
   register: installed_extensions
 
 - name: install extensions
-  command: 'sudo code --user-data-dir="~/.vscode-root" --install-extension -y {{ item }}'
-  loop: "{{ vs_code_extensions }}"
+  command: code --install-extension redhat.vscode-yaml
