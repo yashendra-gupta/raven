@@ -27,4 +27,3 @@
   become: true
   command: "sudo code --user-data-dir=~/root --install-extension {{ item }}"
   loop: "{{ vs_code_extensions }}"
-  when: item not in installed_extensions.stdout
