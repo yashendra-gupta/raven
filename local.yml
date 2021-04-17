@@ -6,3 +6,4 @@
         msg: "Hello world"
   roles:
     - desktop
+    - common
