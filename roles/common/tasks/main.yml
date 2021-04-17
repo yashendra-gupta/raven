@@ -19,7 +19,7 @@
 
 - name: get list of installed extensions
   become: yes
-  command: "code --list-extensions"
+  command: "sudo code --list-extensions"
   changed_when: False
   register: installed_extensions
 
