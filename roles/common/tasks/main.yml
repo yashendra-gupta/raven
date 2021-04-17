@@ -18,6 +18,6 @@
     update_cache: true
 
 - name: install extensions
-  become: true
-  command: "sudo --user-data-dir=~/root code --install-extension {{ item }}"
+  become: yes
+  command: "code --install-extension {{ item }}"
   loop: "{{ vs_code_extensions }}"
