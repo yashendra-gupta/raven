@@ -18,13 +18,11 @@
     update_cache: true
 
 - name: get list of installed extensions
-  become: yes
-  command: "sudo code --user-data-dir=~/root --list-extensions"
+  command: "code --list-extensions"
   changed_when: False
   register: installed_extensions
 
 - name: install extensions
-  become: yes
-  command: "sudo code --user-data-dir=~/root --install-extension {{ item }}"
+  command: "code --install-extension {{ item }}"
   loop: "{{ vs_code_extensions }}"
   when: item not in installed_extensions.stdout
