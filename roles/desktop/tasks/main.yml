@@ -1,8 +1,11 @@
 ---
-- name: "Install GNOME desktpo(ubuntu-desktop)"
+
+# Install GNOOME desktop env.
+- name: Install GNOME desktpo(ubuntu-desktop)
   apt: name="ubuntu-desktop"
 
-- name: "Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)"
+# Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)
+- name: Install virtual box guest additions
   apt: name={{item}}
   install_recommends: no
   with_items:
