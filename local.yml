@@ -4,5 +4,9 @@
     - name: "Print a greeting"
       debug:
         msg: "Hello world"
+  tasks:
+    - name: "Temp task Voila"
+      debug:
+        msg: "Voila GNOME installed"
   roles:
     - desktop
