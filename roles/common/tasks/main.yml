@@ -29,3 +29,4 @@
 
 - name: install extensions
   command: code --install-extension redhat.vscode-yaml
+  become: yes
