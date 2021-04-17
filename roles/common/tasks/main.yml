@@ -23,7 +23,14 @@
     state: present
     update_cache: true
 
+- name: get list of installed extensions
+  become: yes
+  command: "code --list-extensions"
+  changed_when: False
+  register: installed_extensions
+
 - name: install extensions
   become: yes
   command: "code --install-extension {{ item }}"
   loop: "{{ vs_code_extensions }}"
+  when: item not in installed_extensions.stdout
