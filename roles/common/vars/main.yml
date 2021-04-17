@@ -2,10 +2,10 @@
 microsoft_key_url: "https://packages.microsoft.com/keys/microsoft.asc"
 
 #VS code extensions
-vs_code_extensions: [github.github-vscode-theme]
-  # - 
-  # - mhutchie.git-graph
-  # - eamodio.gitlens
-  # - donjayamanne.githistory
-  # - redhat.vscode-yaml
-  # - asciidoctor.asciidoctor-vscode
+vs_code_extensions:
+  - github.github-vscode-theme
+  - mhutchie.git-graph
+  - eamodio.gitlens
+  - donjayamanne.githistory
+  - redhat.vscode-yaml
+  - asciidoctor.asciidoctor-vscode
