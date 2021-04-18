@@ -10,9 +10,7 @@
   user:
     name: vagrant
     uid: 900
-    system: yes
-    createhome: yes
-    home: /home/vagrant
+    become: yes
     password: $6$12345678$a/G1LDUACxcHEBNli0XtNFGhOTbIxKO/dKRRVR.zGRKPhmasPLiGSABurrpcxtH3wwz4/fgyIjN43g4Gi4bCX1
 
 # Copy sudoers_vagrant to /etc/sudeors.d to give vagrant user sudo privileges
