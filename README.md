@@ -16,3 +16,6 @@ Pull ansible and run playbook to setup your environment
 ```shell
 sudo -E ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa"  --url="git@github.com:yashendra-gupta/raven.git" local.yml
 ```
+
+
+check if uid is already in use: `cat /etc/passwd | grep 900`
