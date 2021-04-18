@@ -7,7 +7,7 @@
 
 # Password is encrypted with mkpasswd
 - name: Create vagrant user
-  become: yes
+  become_user: root
   user:
     name: vagrant
     uid: 900
