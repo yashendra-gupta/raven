@@ -1,0 +1,18 @@
+---
+
+- name: Create vagrant group
+  group:
+    name: vagrant
+    gid: 900
+
+- name: Create vagrant user
+  user:
+    name: vagrant
+    uid: 900
+    password: vagrant123
+
+# Copy sudoers_vagrant to /etc/sudeors.d to give vagrant user sudo privileges
+- name: Give vagrant user sudo privileges
+  copy: src=files/sudoers_vagrant dest=/etc/sudoers.d/vagrant owner=root group=root mode=0440
+
+# Check if it got sudo privileges
