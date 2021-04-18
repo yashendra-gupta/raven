@@ -5,13 +5,13 @@
     gid: 900
 
 # Password is encrypted with mkpasswd
-- name: Create vagrant user
-  become: yes
-  become_method: sudo
-  user:
-    name: vagrant
-    uid: 900
-    password: $6$12345678$a/G1LDUACxcHEBNli0XtNFGhOTbIxKO/dKRRVR.zGRKPhmasPLiGSABurrpcxtH3wwz4/fgyIjN43g4Gi4bCX1
+# - name: Create vagrant user
+#   become: yes
+#   become_method: sudo
+#   user:
+#     name: vagrant
+#     uid: 900
+#     password: $6$12345678$a/G1LDUACxcHEBNli0XtNFGhOTbIxKO/dKRRVR.zGRKPhmasPLiGSABurrpcxtH3wwz4/fgyIjN43g4Gi4bCX1
 
 # Copy sudoers_vagrant to /etc/sudeors.d to give vagrant user sudo privileges
 - name: Give vagrant user sudo privileges
