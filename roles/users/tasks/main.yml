@@ -1,5 +1,4 @@
 ---
-
 - name: Create vagrant group
   group:
     name: vagrant
@@ -7,6 +6,8 @@
 
 # Password is encrypted with mkpasswd
 - name: Create vagrant user
+  become: yes
+  become_method: sudo
   user:
     name: vagrant
     uid: 900
