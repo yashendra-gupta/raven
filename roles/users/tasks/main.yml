@@ -3,14 +3,14 @@
 - name: Create vagrant group
   group:
     name: yg
-    gid: 900
+    gid: 901
 
 # Password is encrypted with mkpasswd
 - name: Create vagrant user
   become: true
   user:
     name: yg
-    uid: 900
+    uid: 901
     password: $6$12345678$a/G1LDUACxcHEBNli0XtNFGhOTbIxKO/dKRRVR.zGRKPhmasPLiGSABurrpcxtH3wwz4/fgyIjN43g4Gi4bCX1
 
 # Copy sudoers_vagrant to /etc/sudeors.d to give vagrant user sudo privileges
