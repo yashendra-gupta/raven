@@ -5,6 +5,6 @@
       debug:
         msg: "Hello world"
   roles:
-    - users
+#    - users
     - desktop
 #    - common
