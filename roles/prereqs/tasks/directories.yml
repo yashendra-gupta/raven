@@ -1,0 +1,9 @@
+---
+
+- name: Create a Development directory if it does not exist
+  ansible.builtin.file:
+    path: /opt/development
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
