@@ -5,7 +5,8 @@
   register: maven_exists
 
 - name: Download Maven
-  get_url: https://downloads.apache.org/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
-  dest: /tmp/apache-maven-{{maven_version}}-bin.tar.gz
+  get_url: 
+    url: https://downloads.apache.org/maven/maven-3/{{maven_version}}/binaries/apache-maven-{{maven_version}}-bin.tar.gz
+    dest: /tmp/apache-maven-{{maven_version}}-bin.tar.gz
   when:
     maven_exists.stat.exists == false
