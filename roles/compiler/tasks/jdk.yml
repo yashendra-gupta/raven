@@ -1,0 +1,7 @@
+---
+
+- name: Install latest version of "openjdk-6-jdk" ignoring "install-recommends"
+  apt: 
+    name: openjdk-8-jdk
+    update_cache: yes
+    install_recommends: no
