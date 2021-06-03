@@ -7,3 +7,11 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
+
+- name: Create a bin for Development directory if it does not exist
+  ansible.builtin.file:
+    path: /opt/development/bin
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'    
