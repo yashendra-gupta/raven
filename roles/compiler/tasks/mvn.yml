@@ -26,5 +26,12 @@
     owner: root
     group: root
 
-- name: 
+- name: Add Maven to the shell environment
+  copy:
+    dest: /home/vagrant/.bashrc.d/maven.sh 
+    content: "export MAVEN_HOME=/opt/development/apache-maven-{{maven_version}}"
+    owner: vagrant
+    group: vagrant
+    mode: '0755'   
+
   
