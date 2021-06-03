@@ -5,6 +5,4 @@
       debug:
         msg: "Hello world"
   roles:
-#    - users
     - desktop
-    - common
