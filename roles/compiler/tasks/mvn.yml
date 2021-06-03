@@ -18,7 +18,7 @@
   when:
     maven_exists.stat.exists == false
 
-- name: Link Maven to developer bin
+- name: Link Maven to development bin
   file: 
     src=/opt/development/apache-maven-{{maven_version}}/bin/mvn
     dest=/opt/development/bin/mvn
