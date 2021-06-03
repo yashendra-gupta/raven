@@ -10,3 +10,11 @@
     dest: /tmp/apache-maven-{{maven_version}}-bin.tar.gz
   when:
     maven_exists.stat.exists == false
+
+- name: Unpack Maven
+  unarchive:
+    src: /tmp/apache-maven-{{maven_version}}-bin.tar.gz
+    dest: /opt/development
+  when:
+    maven_exists.stat.exists == false
+  
