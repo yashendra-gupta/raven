@@ -1,4 +1,4 @@
 ---
 
 - import_tasks : eclipse.yml
-- import_tasks : vs-code.yml
+- import_tasks : vscode.yml
