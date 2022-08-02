@@ -25,3 +25,11 @@
     state: link
     owner: root
     group: root
+
+- name: Add VS Code to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/vscode.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
