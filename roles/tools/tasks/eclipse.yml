@@ -1,0 +1,27 @@
+---
+
+- name: Check if Eclipse exists
+  stat: path=/opt/development/eclipse
+  register: eclipse_exists
+
+- name: Download Eclipse 
+  get_url: 
+    url: "{{eclipse_download_url}}"
+    dest: /tmp/eclipse-jee-{{eclipse_version}}-linux-gtk-x86_64.tar.gz
+  when:
+    eclipse_exists.stat.exists == false
+
+- name: Unpack Eclipse
+  unarchive:
+    src: /tmp/eclipse-jee-{{eclipse_version}}-linux-gtk-x86_64.tar.gz
+    dest: /opt/development
+  when:
+    eclipse_exists.stat.exists == false
+
+- name: Link JDK to development bin
+  ansible.builtin.file:
+    src: /opt/development/eclipse/eclipse
+    dest: /opt/development/bin/eclipse
+    state: link
+    owner: root
+    group: root
