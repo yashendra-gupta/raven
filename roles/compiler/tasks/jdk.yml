@@ -1,7 +1,37 @@
 ---
 
-- name: Install latest version of "openjdk-6-jdk" ignoring "install-recommends"
-  apt: 
-    name: openjdk-8-jdk
-    update_cache: yes
-    install_recommends: no
+- name: Check if JDK exists
+  stat: path=/opt/development/jdk-{{jdk_version}}
+  register: jdk_exists
+
+- name: Download JDK 
+  get_url: 
+    url: {{jdk_download_url}}
+    dest: /tmp/openjdk-{{jdk_version}}_linux-x64_bin.tar.gz
+  when:
+    jdk_exists.stat.exists == false
+
+- name: Unpack JDK
+  unarchive:
+    src: /tmp/jdk-{{{{jdk_version}}}}-bin.tar.gz
+    dest: /opt/development
+  when:
+    jdk_exists.stat.exists == false
+
+- name: Link JDK to development bin
+  ansible.builtin.file:
+    src: /opt/development/jdk-{{{{jdk_version}}}}/
+    dest: /opt/development/bin/jdk
+    state: link
+    owner: root
+    group: root
+
+- name: Add JDK to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/jdk.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'   
+
+  
