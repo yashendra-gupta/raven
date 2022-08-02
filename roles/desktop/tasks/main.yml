@@ -1,7 +1,7 @@
 ---
-# Install GNOOME desktop env.
-- name: Install GNOME desktpo(ubuntu-desktop)
-  apt: name="ubuntu-desktop"
+# Install KDE desktop env.
+- name: Install KDE desktpo(kde-plasma-desktop)
+  apt: name="kde-plasma-desktop"
 
 # Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)
 - name: Install virtual box guest additions
