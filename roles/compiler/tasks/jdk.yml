@@ -13,7 +13,7 @@
 
 - name: Unpack JDK
   unarchive:
-    src: /tmp/jdk-{{{{jdk_version}}}}-bin.tar.gz
+    src: /tmp/jdk-{{{{jdk_version}}}}_bin.tar.gz
     dest: /opt/development
   when:
     jdk_exists.stat.exists == false
