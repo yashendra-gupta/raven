@@ -5,4 +5,5 @@ eclipse_version: "2021-09-R"
 eclipse_download_url: https://archive.eclipse.org/technology/epp/downloads/release/2021-09/R/eclipse-jee-2021-09-R-linux-gtk-x86_64.tar.gz
 
 # VS Code
-vs_code_download_url: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code-stable-x64-1655263335.tar.gz  #https://code.visualstudio.com/updates/v1_68
+vscode_version_identifier: "1655263335"
+vsode_download_url: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code-stable-x64-1655263335.tar.gz  #https://code.visualstudio.com/updates/v1_68
