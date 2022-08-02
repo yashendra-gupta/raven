@@ -13,14 +13,14 @@
 
 - name: Unpack JDK
   unarchive:
-    src: /tmp/jdk-{{{{jdk_version}}}}_bin.tar.gz
+    src: /tmp/openjdk-{{jdk_version}}_bin.tar.gz
     dest: /opt/development
   when:
     jdk_exists.stat.exists == false
 
 - name: Link JDK to development bin
   ansible.builtin.file:
-    src: /opt/development/jdk-{{{{jdk_version}}}}/
+    src: /opt/development/jdk-{{jdk_version}}/
     dest: /opt/development/bin/jdk
     state: link
     owner: root
@@ -32,6 +32,4 @@
     dest: /home/vagrant/.bashrc.d/
     owner: vagrant
     group: vagrant
-    mode: '0755'   
-
-  
+    mode: '0755' 
