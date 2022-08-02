@@ -6,7 +6,7 @@
 
 - name: Download JDK 
   get_url: 
-    url: {{jdk_download_url}}
+    url: "{{jdk_download_url}}"
     dest: /tmp/openjdk-{{jdk_version}}_linux-x64_bin.tar.gz
   when:
     jdk_exists.stat.exists == false
