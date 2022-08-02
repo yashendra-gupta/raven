@@ -28,7 +28,7 @@
 
 - name: Add Maven to the shell environment
   copy:
-    src: {{ role_path }}/files/bashrc/mvn.bashrc
+    src: "{{ role_path }}/files/bashrc/mvn.bashrc"
     dest: /home/vagrant/.bashrc.d/
     owner: vagrant
     group: vagrant
