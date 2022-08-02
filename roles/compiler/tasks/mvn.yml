@@ -20,7 +20,7 @@
 
 - name: Link Maven to development bin
   ansible.builtin.file:
-    src: /opt/development/apache-maven-{{maven_version}}/bin/
+    src: /opt/development/apache-maven-{{maven_version}}/
     dest: /opt/development/bin/mvn
     state: link
     owner: root
