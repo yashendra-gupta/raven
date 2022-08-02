@@ -20,7 +20,7 @@
 
 - name: Link JDK to development bin
   ansible.builtin.file:
-    src: /opt/development/openjdk-{{jdk_version}}_linux-x64_bin/
+    src: /opt/development/jdk-{{jdk_version}}/
     dest: /opt/development/bin/jdk
     state: link
     owner: root
