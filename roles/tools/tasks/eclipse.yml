@@ -18,7 +18,7 @@
   when:
     eclipse_exists.stat.exists == false
 
-- name: Link JDK to development bin
+- name: Link Eclipse to development bin
   ansible.builtin.file:
     src: /opt/development/eclipse/eclipse
     dest: /opt/development/bin/eclipse
