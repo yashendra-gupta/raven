@@ -14,7 +14,7 @@
 - name: Unpack JDK
   unarchive:
     src: /tmp/openjdk-{{jdk_version}}_linux-x64_bin.tar.gz
-    dest: /opt/development/jd
+    dest: /opt/development
   when:
     jdk_exists.stat.exists == false
 
