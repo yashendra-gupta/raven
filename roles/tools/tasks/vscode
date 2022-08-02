@@ -1,0 +1,27 @@
+---
+
+- name: Check if VS Code exists
+  stat: path=/opt/development/VSCode-linux-x64
+  register: vscode_exists
+
+- name: Download VS Code 
+  get_url: 
+    url: "{{vscode_download_url}}"
+    dest: /tmp/code-stable-x64-{{vscode_version_identifier}}.tar
+  when:
+    vscode_exists.stat.exists == false
+
+- name: Unpack VS Code
+  unarchive:
+    src: /tmp/code-stable-x64-{{vscode_version_identifier}}.tar
+    dest: /opt/development
+  when:
+    vscode_exists.stat.exists == false
+
+- name: Link VS code to development bin
+  ansible.builtin.file:
+    src: /opt/development/VSCode-linux-x64
+    dest: /opt/development/bin/vscode
+    state: link
+    owner: root
+    group: root
