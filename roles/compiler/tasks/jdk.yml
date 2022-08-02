@@ -13,14 +13,14 @@
 
 - name: Unpack JDK
   unarchive:
-    src: /tmp/openjdk-{{jdk_version}}_bin.tar.gz
-    dest: /opt/development
+    src: /tmp/openjdk-{{jdk_version}}_linux-x64_bin.tar.gz
+    dest: /opt/development/jd
   when:
     jdk_exists.stat.exists == false
 
 - name: Link JDK to development bin
   ansible.builtin.file:
-    src: /opt/development/jdk-{{jdk_version}}/
+    src: /opt/development/openjdk-{{jdk_version}}_linux-x64_bin/
     dest: /opt/development/bin/jdk
     state: link
     owner: root
