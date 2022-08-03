@@ -1,0 +1,18 @@
+---
+
+- name: Check if Chrome exists
+  stat: path=/opt/development/chrome
+  register: chrome_exists
+
+- name: Download Chrome 
+  get_url: 
+    url: "{{chrome_download_url}}"
+    dest: /opt/development/chrome.deb
+  when:
+    chrome_exists.stat.exists == false
+
+- name: Install a  Chrome .deb package
+  ansible.builtin.apt:
+    deb: /tmp/chrome.deb
+  when:
+    chrome_exists.stat.exists == false
