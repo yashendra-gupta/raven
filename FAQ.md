@@ -10,7 +10,7 @@ Note: Just KDE/Ubuntu desktops can tak1-2hrs to complete, as their size is big.
 **A.** This may be the case for login screen. Once you login, it will become big. In case, screen is small post login, try to minimize/maximize virtualbox window.
 
 
-**Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ? ***
+**Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ?***
 
 **A.** To fix, do following -
 - Open terminal and run `uname -r` to check kernel version
