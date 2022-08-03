@@ -1,7 +1,7 @@
 ---
 # Install KDE desktop env.
-- name: Install KDE desktpo(kde-plasma-desktop)
-  apt: name="kde-plasma-desktop"
+- name: Install KDE desktop(kde-full)
+  apt: name="kde-full"
 
 # Add guest additions for vitual to get full screen view(TODO: It will better to isolate this task to be independent underlying VM)
 - name: Install virtual box guest additions
