@@ -19,7 +19,3 @@ sudo -E ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa"
 
 
 check if uid is already in use: `cat /etc/passwd | grep 900`
-
-# FAQ
-- **`ava --version` or `mvn -v` , etc command not found?** 
-  - Ans: This may be due to .bashrc has not picked lates changes, so try to logging off from machine and login again.
