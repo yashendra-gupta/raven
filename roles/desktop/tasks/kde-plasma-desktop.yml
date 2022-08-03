@@ -1,0 +1,4 @@
+---
+# Install KDE desktop env.
+- name: Install KDE desktop(kde-plasma-desktop)
+  apt: name="kde-plasma-desktop"
