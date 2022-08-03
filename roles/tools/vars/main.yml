@@ -7,3 +7,7 @@ eclipse_download_url: https://archive.eclipse.org/technology/epp/downloads/relea
 # VS Code
 vscode_version_identifier: "1655263335"
 vscode_download_url: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc586687151bcbcd635f373630/code-stable-x64-1655263335.tar.gz  #https://code.visualstudio.com/updates/v1_68
+
+# Postman
+postman_version: "latest"
+postman_download_url: "https://dl.pstmn.io/download/latest/linux64"
