@@ -1,7 +1,7 @@
 ---
 
 - name: Check if NodeJS exists
-  stat: path=/opt/development/nodejs-{{nodejs_version}}-linux-x64
+  stat: path=/opt/development/node-{{nodejs_version}}-linux-x64
   register: nodejs_exists
 
 - name: Download NodeJS
