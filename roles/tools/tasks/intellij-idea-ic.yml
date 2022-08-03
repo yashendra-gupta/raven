@@ -1,7 +1,7 @@
 ---
 
 - name: Check if Intellij IDEA Community exists
-  stat: path=/opt/development/idea-IC-{{intellij_idea_ic_version}}
+  stat: path=/opt/development/idea-IC-{{intellij_idea_ic_build_version}}
   register: intellij_idea_ic_exists
 
 - name: Download Intellij IDEA Community 
@@ -20,7 +20,7 @@
 
 - name: Link Intellij IDEA Community to development bin
   ansible.builtin.file:
-    src: /opt/development/idea-IC-{{intellij_idea_ic_version}}
+    src: /opt/development/idea-IC-{{intellij_idea_ic_build_version}}
     dest: /opt/development/bin/intellij_idea_ic
     state: link
     owner: root
