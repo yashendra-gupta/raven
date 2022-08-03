@@ -1,7 +1,7 @@
 ---
 
 - name: Check if Chrome exists
-  stat: path=/opt/development/chrome
+  stat: path=/opt/development/chrome.deb
   register: chrome_exists
 
 - name: Download Chrome 
