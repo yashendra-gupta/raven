@@ -12,7 +12,7 @@ Note: Just KDE/Ubuntu desktops can tak1-2hrs to complete, as their size is big.
 
 **Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ?***
 
-**A.** To fix, do following -
+**A.** Check in virtual box audio settings are enabled(audio output and audio input). Post enabling also, if audio is not working then follow below steps to fix the issue -
 - Open terminal and run `uname -r` to check kernel version
 - Then run `sudo apt-get install linux-modules-extra-<kernel-verion>-generic`
 - Then run `sudo sh -c 'echo "snd-hda-intel" >> /etc/modules'`
