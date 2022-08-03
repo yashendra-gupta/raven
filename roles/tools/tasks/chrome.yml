@@ -13,6 +13,6 @@
 
 - name: Install a  Chrome .deb package
   ansible.builtin.apt:
-    deb: /tmp/chrome.deb
+    deb: /opt/development/chrome.deb
   when:
     chrome_exists.stat.exists == false
