@@ -1,0 +1,27 @@
+---
+
+- name: Check if Postman exists
+  stat: path=/opt/development/postman
+  register: postman_exists
+
+- name: Download Postman 
+  get_url: 
+    url: {{postman_download_url}}
+    dest: /tmp/postman-{{postman_version}}-linux-x64.tar
+  when:
+    postman_exists.stat.exists == false
+
+- name: Unpack Postman
+  unarchive:
+    src: /tmp/postman-{{postman_version}}-linux-x64.tar
+    dest: /opt/development
+  when:
+    postman_exists.stat.exists == false
+
+- name: Link Postman to development bin
+  ansible.builtin.file:
+    src: /opt/development/Postman/app
+    dest: /opt/development/bin/postman
+    state: link
+    owner: root
+    group: root
