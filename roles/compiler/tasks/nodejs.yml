@@ -1,0 +1,36 @@
+---
+
+- name: Check if NodeJS exists
+  stat: path=/opt/development/nodejs-{{nodejs_version}}-linux-x64
+  register: nodejs_exists
+
+- name: Download NodeJS
+  get_url: 
+    url: "{{nodejs_download_url}}"
+    dest: /tmp/node-{{nodejs_version}}-linux-x64.tar.xz
+  when:
+    nodejs_exists.stat.exists == false
+
+- name: Unpack NodeJS
+  unarchive:
+    src: /tmp/node-{{nodejs_version}}-linux-x64.tar.xz
+    dest: /opt/development
+  when:
+    nodejs_exists.stat.exists == false
+
+- name: Link NodeJS to development bin
+  ansible.builtin.file:
+    src: /opt/development/node-{{nodejs_version}}-linux-x64/
+    dest: /opt/development/bin/nodejs
+    state: link
+    owner: root
+    group: root
+
+- name: Add NodeJS to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/nodejs.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'   
+
