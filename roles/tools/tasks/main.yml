@@ -3,3 +3,4 @@
 - import_tasks : eclipse.yml
 - import_tasks : vscode.yml
 - import_tasks : postman.yml
+- import_tasks : chrome.yml
