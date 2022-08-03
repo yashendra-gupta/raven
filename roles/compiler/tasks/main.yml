@@ -2,3 +2,5 @@
 
 - import_tasks : jdk.yml
 - import_tasks : mvn.yml
+- import_tasks : nodejs.yml
+
