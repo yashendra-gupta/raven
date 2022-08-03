@@ -5,7 +5,7 @@
       debug:
         msg: "Hello world"
   roles:
-    - desktop
+#    - desktop
     - prereqs
     - compiler
     - tools
