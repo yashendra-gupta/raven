@@ -1,0 +1,27 @@
+---
+
+- name: Check if Intellij IDEA Community exists
+  stat: path=/opt/development/idea-IC-{{intellij_idea_ic_version}}
+  register: intellij_idea_ic_exists
+
+- name: Download Intellij IDEA Community 
+  get_url: 
+    url: "{{intellij_idea_ic_download_url}}"
+    dest: /tmp/ideaIC-{{intellij_idea_ic_version}}.tar.gz
+  when:
+    intellij_idea_ic_exists.stat.exists == false
+
+- name: Unpack Intellij IDEA Community
+  unarchive:
+    src: /tmp/ideaIC-{{intellij_idea_ic_version}}.tar.gz
+    dest: /opt/development
+  when:
+    intellij_idea_ic_exists.stat.exists == false
+
+- name: Link Intellij IDEA Community to development bin
+  ansible.builtin.file:
+    src: /opt/development/idea-IC-{{intellij_idea_ic_version}}
+    dest: /opt/development/bin/intellij_idea_ic
+    state: link
+    owner: root
+    group: root
