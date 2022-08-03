@@ -11,3 +11,6 @@ vscode_download_url: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc58668
 # Postman
 postman_version: "latest"
 postman_download_url: https://dl.pstmn.io/download/latest/linux64
+
+# Postman
+chrome_download_url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
