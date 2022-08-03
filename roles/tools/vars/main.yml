@@ -14,3 +14,9 @@ postman_download_url: https://dl.pstmn.io/download/latest/linux64
 
 # Postman
 chrome_download_url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+# IntelliJ IDEA Community Edition
+intellij_idea_ic_version: "2022.1.4"
+intellij_idea_ic_download_url: https://download-cdn.jetbrains.com/idea/ideaIC-2022.1.4.tar.gz
+
+
