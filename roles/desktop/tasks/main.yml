@@ -1,3 +1,3 @@
 ---
 
-- import_tasks : ubuntu-desktop.yml
+- import_tasks : kde-plasma-desktop.yml
