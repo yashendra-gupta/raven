@@ -6,7 +6,7 @@
 
 - name: Download Postman 
   get_url: 
-    url: {{postman_download_url}}
+    url: "{{postman_download_url}}"
     dest: /tmp/postman-{{postman_version}}-linux-x64.tar
   when:
     postman_exists.stat.exists == false
