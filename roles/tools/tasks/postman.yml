@@ -1,7 +1,7 @@
 ---
 
 - name: Check if Postman exists
-  stat: path=/opt/development/postman
+  stat: path=/opt/development/Postman
   register: postman_exists
 
 - name: Download Postman 
@@ -20,7 +20,7 @@
 
 - name: Link Postman to development bin
   ansible.builtin.file:
-    src: /opt/development/Postman/app
+    src: /opt/development/Postman/app/postman
     dest: /opt/development/bin/postman
     state: link
     owner: root
