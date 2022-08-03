@@ -1,0 +1,4 @@
+---
+# Install KDE desktop env.
+- name: Install KDE desktop(kde-full)
+  apt: name="kde-full"
