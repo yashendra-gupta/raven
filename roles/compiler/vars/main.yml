@@ -9,4 +9,4 @@ maven_version: "3.8.1"
 
 # NodeJS
 nodejs_version : "v16.16.0"
-nodejs_download_url : https://nodejs.org/dist/{{nodejs_version}}/node-{{nodejs_version}}-linux-x64.tar.xz
+nodejs_download_url : https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz
