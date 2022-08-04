@@ -1,0 +1,51 @@
+---
+
+- name: Enable CPU usage widget and configure it
+  ansible.builtin.blockinfile:
+    path: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
+    block: |
+      # CPU usage widget
+      [Containments][2][Applets][37]
+      immutability=1
+      plugin=org.kde.plasma.systemmonitor
+      
+      [Containments][2][Applets][37][Configuration]
+      PreloadWeight=100
+      
+      [Containments][2][Applets][37][Configuration][Appearance]
+      chartFace=org.kde.ksysguard.piechart
+      title=Individual Core Usage
+      
+      [Containments][2][Applets][37][Configuration][ConfigDialog]
+      DialogHeight=540
+      DialogWidth=720
+      
+      [Containments][2][Applets][37][Configuration][SensorColors]
+      cpu/all/coreCount=61,233,142
+      cpu/all/cpuCount=61,184,233
+      cpu/all/name=67,61,233
+      cpu/all/system=74,233,61
+      cpu/all/usage=233,0,0
+      cpu/all/user=233,61,95
+      cpu/all/wait=227,233,61
+      cpu/cpu0/frequency=206,233,61
+      cpu/cpu0/name=233,61,61
+      cpu/cpu0/system=61,233,221
+      cpu/cpu0/temperature=61,233,178
+      cpu/cpu0/usage=61,174,233
+      cpu/cpu0/user=61,233,127
+      cpu/cpu0/wait=233,77,61
+      cpu/cpu1/frequency=61,189,233
+      cpu/cpu1/name=123,61,233
+      cpu/cpu1/system=233,131,61
+      cpu/cpu1/temperature=233,101,61
+      cpu/cpu1/usage=233,120,61
+      cpu/cpu1/user=165,233,61
+      cpu/cpu1/wait=219,233,61
+      cpu/loadaverages/loadaverage1=233,61,78
+      cpu/loadaverages/loadaverage15=61,130,233
+      cpu/loadaverages/loadaverage5=233,61,193
+      
+      [Containments][2][Applets][37][Configuration][Sensors]
+      highPrioritySensorIds=["cpu/all/name","cpu/all/cpuCount","cpu/all/coreCount","cpu/all/usage","cpu/all/system","cpu/all/user","cpu/all/wait","cpu/cpu0/name","cpu/cpu0/usage","cpu/cpu0/system","cpu/cpu0/user","cpu/cpu0/wait","cpu/cpu0/frequency","cpu/cpu0/temperature","cpu/cpu1/name","cpu/cpu1/usage","cpu/cpu1/system","cpu/cpu1/user","cpu/cpu1/wait","cpu/cpu1/frequency","cpu/cpu1/temperature","cpu/loadaverages/loadaverage15","cpu/loadaverages/loadaverage5","cpu/loadaverages/loadaverage1"]
+      totalSensors=["cpu/all/usage"]
