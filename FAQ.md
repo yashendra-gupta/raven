@@ -1,19 +1,19 @@
 # FAQs
 
-**Q. *When running Ansible playbook, it seems like it is stuck?*** (Very fast time when setting up box)
+**Q. *When running Ansible playbook, it seems like it is stuck?*** (Very first time when setting up box)
 
 **A.**  This is expected because artifacts being downloaded in background.  It is recommended not interrupt playbook process, so go grab cup of tea and take walk till playbook completes.
 Note: Just KDE/Ubuntu desktops can tak1-2hrs to complete, as their size is big.
 
-**Q. *Is desktop screen small in size?*** (Very fast time when setting up box)
+**Q. *Is desktop screen small in size?*** (Very first time when setting up box)
 
 **A.** This may be the case for login screen. Once you login, it will become big. In case, screen is small post login, try to minimize/maximize virtualbox window.
 
-**Q. *`java --version` or `mvn -v` , etc command not found?*** (Very fast time when setting up box)
+**Q. *`java --version` or `mvn -v` , etc command not found?*** (Very first time when setting up box)
 
 **A.** This may be due to .bashrc has not picked lates changes, so try to logging off from machine and login again.
 
-**Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ?*** (Very fast time when setting up box)
+**Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ?*** (Very first time when setting up box)
 
 **A.** Check in virtual box audio settings are enabled(audio output and audio input). Post enabling also, if audio is not working then follow below steps to fix the issue -
 - Open terminal and run `uname -r` to check kernel version
