@@ -87,6 +87,35 @@
       lowPrioritySensorIds=[]
       totalSensors=["memory/physical/usedPercent"]
 
+- name: Enable Network usage widget and configure it
+  ansible.builtin.blockinfile:
+    path: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
+    block: |
+      # Network usage widget
+      [Containments][2][Applets][41]
+      immutability=1
+      plugin=org.kde.plasma.systemmonitor
+      
+      [Containments][2][Applets][41][Configuration]
+      PreloadWeight=100
+      
+      [Containments][2][Applets][41][Configuration][Appearance]
+      chartFace=org.kde.ksysguard.linechart
+      title=Network speed
+      
+      [Containments][2][Applets][41][Configuration][ConfigDialog]
+      DialogHeight=540
+      DialogWidth=720
+      
+      [Containments][2][Applets][41][Configuration][SensorColors]
+      network/all/download=61,174,233
+      network/all/totalDownload=61,123,233
+      network/all/totalUpload=104,61,233
+      network/all/upload=233,120,61
+      
+      [Containments][2][Applets][41][Configuration][Sensors]
+      highPrioritySensorIds=["network/all/download","network/all/upload","network/all/totalDownload","network/all/totalUpload"]
+      
 - name: Enable Disk usage widget and configure it
   ansible.builtin.blockinfile:
     path: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
@@ -117,33 +146,4 @@
       
       [Containments][2][Applets][43][Configuration][Sensors]
       highPrioritySensorIds=["disk/all/total","disk/all/used","disk/all/free","disk/all/read","disk/all/write"]
-      
-- name: Enable Network usage widget and configure it
-  ansible.builtin.blockinfile:
-    path: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
-    block: |
-      # Network usage widget
-      [Containments][2][Applets][41]
-      immutability=1
-      plugin=org.kde.plasma.systemmonitor
-      
-      [Containments][2][Applets][41][Configuration]
-      PreloadWeight=100
-      
-      [Containments][2][Applets][41][Configuration][Appearance]
-      chartFace=org.kde.ksysguard.linechart
-      title=Network speed
-      
-      [Containments][2][Applets][41][Configuration][ConfigDialog]
-      DialogHeight=540
-      DialogWidth=720
-      
-      [Containments][2][Applets][41][Configuration][SensorColors]
-      network/all/download=61,174,233
-      network/all/totalDownload=61,123,233
-      network/all/totalUpload=104,61,233
-      network/all/upload=233,120,61
-      
-      [Containments][2][Applets][41][Configuration][Sensors]
-      highPrioritySensorIds=["network/all/download","network/all/upload","network/all/totalDownload","network/all/totalUpload"]
       
