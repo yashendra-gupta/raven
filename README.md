@@ -19,3 +19,9 @@ sudo -E ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa"
 
 
 check if uid is already in use: `cat /etc/passwd | grep 900`
+
+**Note:** 
+1. On fresh installation post anisble play, somtimes machine might not start. To resolve, just do clean installation again.
+2. On fresh installation post ansible play, there may be a possibility that normal GNOME/Ubuntu login screen will be shown. This may look strange provided that the installed desktop was KDE plasma desktop. So, in order to use KDE, remember to choose plasma during login. To view this option, click on login's username texbox and a icon will be shown in bottom right corner.
+
+
