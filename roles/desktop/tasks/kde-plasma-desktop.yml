@@ -2,3 +2,10 @@
 # Install KDE desktop env.
 - name: Install KDE desktop(kde-plasma-desktop)
   apt: name="kde-plasma-desktop"
+
+#  Reboot machine to load with desktop
+- name: Reboot machine to load with desktop 
+  ansible.builtin.reboot:
+    msg: "KDE desktop installed. Rebooting machine to load with desktop."
+    post_reboot_delay: 5000
+    reboot_timeout: 60000
