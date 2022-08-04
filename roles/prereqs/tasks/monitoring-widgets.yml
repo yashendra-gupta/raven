@@ -152,5 +152,5 @@
     path: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
     block: |
       # Order widgets
-      Containments][2][General]
+      [Containments][2][General]
       AppletOrder=3;5;41;43;40;37;6;7;17;16
