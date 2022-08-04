@@ -4,7 +4,7 @@ Raven is a full stack development environment using Ansible. It contains playboo
 Set up git ssh
 
 ```shell
-ssh-keygen -t rsa -b 4096 -C "yashendragupta2704@gmail.com"
+ssh-keygen -t rsa -b 4096 -C <email-id>
 ```
 
 To see your ssh public key, open terminal and run:
