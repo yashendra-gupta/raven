@@ -16,7 +16,6 @@
     group: vagrant
     mode: '0755'    
 
-
 - name: Create a bashrc directory if it does not exist
   ansible.builtin.file:
     path: ~/.bashrc.d
@@ -24,3 +23,11 @@
     owner: vagrant
     group: vagrant
     mode: '0755'    
+    
+- name: Creates a bin directory under home directory of Vagrant user, if it does not exist
+  ansible.builtin.file:
+    path: /home/vagrant/bin
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
