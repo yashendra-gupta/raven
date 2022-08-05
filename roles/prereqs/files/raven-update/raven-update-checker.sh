@@ -12,7 +12,9 @@ if  [ -d /opt/development/raven ]
 then
         echo "Directory exist...will fetch"
         cd /opt/development/raven
-        /usr/bin/git git fetch --all
+
+        FETCH=/usr/bin/git git fetch --all
+
         diffCount=$(git rev-list --count main..origin/main)
         echo "Diff Count =  $diffCount"
         notify-send -t 10000  "Raven Updates" "$diffCount new update(s) available"
