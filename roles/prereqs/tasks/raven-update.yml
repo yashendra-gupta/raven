@@ -25,10 +25,5 @@
     mode: '0755'
 
 - name: Create cron job to check for updates
-  ansible.builtin.shell: |
-    cron_update="* * * * * /home/vagrant/test-update/update.sh"
-    crontab -l > crontab_tmp
-    echo "$cron_update" >> crontab_tmp
-    crontab crontab_tmp
-    rm crontab_tmp
-      
+  ansible.builtin.shell: 
+    cmd: /usr/bin/bash /opt/development/bin/raven-update/.add-cron.sh
