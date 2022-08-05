@@ -2,3 +2,8 @@
 # Install KDE desktop env.
 - name: Install KDE desktop(kde-plasma-desktop)
   apt: name="kde-plasma-desktop"
+
+- name: Install libnotify-bin to generate notification
+  ansible.builtin.apt:
+    update_cache: yes 
+    name: libnotify-bin
