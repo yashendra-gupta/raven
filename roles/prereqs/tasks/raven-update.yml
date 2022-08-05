@@ -24,6 +24,16 @@
     group: vagrant
     mode: '0755'
 
+# Add job in Vagrant user crontab
+#
+# Quick facts:
+# 1. Creates job, if not present in crontab.
+# 2. If playbook has already created job and in future someone modify the job by using "crontab -e", 
+# then on running playbook again, this tasks will override it by job specified here.
+# 3. Does this add new job in crontab each time playbook runs? No, thats the beauty of it. Cool aah!!, using shell script will add duplicates unless handled.
+# 
+# Note: Dont give alias in job, as they are not visible in crontab. Thats why using path "/opt/development/bin/raven-update/raven-update-checker.sh"
+# instead of "raven-update-check" alias
 - name: Create cron job to check for updates
   ansible.builtin.cron:
     name: "raven-update-checker"
