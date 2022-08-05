@@ -21,4 +21,4 @@ intellij_idea_ic_build_version: "221.6008.13"
 intellij_idea_ic_download_url: https://download-cdn.jetbrains.com/idea/ideaIC-2022.1.4.tar.gz
 
 # Docker
-DOCKER_VERSION: "5:20.10.16~3-0~ubuntu-jammy"
+DOCKER_VERSION: "docker-ce | 5:20.10.16~3-0~ubuntu-jammy | https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages"
