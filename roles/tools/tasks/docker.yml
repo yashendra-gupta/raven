@@ -27,4 +27,4 @@
       - containerd.io={{ DOCKER_VERSION }}
       - docker-compose-plugin={{ DOCKER_VERSION }}
   when:
-    docker_repo.stat.exists == false
+    docker_repo.stat.exists == true
