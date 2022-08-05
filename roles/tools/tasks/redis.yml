@@ -7,4 +7,4 @@
   
 - name: Install Redis
   ansible.builtin.apt:
-    name: redis=7.0.4
+    name: redis
