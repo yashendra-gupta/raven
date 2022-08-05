@@ -16,6 +16,14 @@
     group: vagrant
     mode: '0755'    
 
+- name: Create a log directory under /opt, if it does not exist
+  ansible.builtin.file:
+    path: /opt/log
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755' 
+    
 - name: Create a bashrc directory if it does not exist
   ansible.builtin.file:
     path: ~/.bashrc.d
