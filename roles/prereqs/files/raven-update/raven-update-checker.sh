@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # For notify-send to work, set DBUS_SESSION_BUS_ADDRESS
-# Refer - https://stackoverflow.com/a/33723614
+# Refer 
+#   - https://stackoverflow.com/a/33723614
+#   - https://askubuntu.com/questions/926626/how-do-i-fix-warning-command-substitution-ignored-null-byte-in-input/926695#926695
 # Note: Desktop environment for  KDE is dolphin and for GNOME it is nautilus
+
 username=$(/usr/bin/whoami)
 pid=$(pgrep -u $username dolphin)
-dbus=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$pid/environ | sed 's/DBUS_SESSION_BUS_ADDRESS=//' )
+dbus=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$pid/environ | tr '\0' '\n' | sed 's/DBUS_SESSION_BUS_ADDRESS=//' )
 export DBUS_SESSION_BUS_ADDRESS=$dbus
 
 if  [ -d /opt/development/raven ]
