@@ -8,6 +8,14 @@
     group: vagrant
     mode: '0755'
 
+- name: Link Raven update to development bin
+  ansible.builtin.file:
+    src: /opt/development/raven-update
+    dest: /opt/development/bin/raven-update
+    state: link
+    owner: root
+    group: root
+    
 - name: Add Raven update to the shell environment
   copy:
     src: "{{ role_path }}/files/raven-update/raven-update.bashrc"
