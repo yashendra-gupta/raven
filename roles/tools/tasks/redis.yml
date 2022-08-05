@@ -1,12 +1,20 @@
 ---
 
+- name: Get stats of a file
+  ansible.builtin.stat:
+    path: /usr/share/keyrings/redis-archive-keyring.gpg
+  register: redis_archive_keyring
+  
 - name: Add the repository to the apt index
   ansible.builtin.shell: |
     curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
     echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-  args:
-    warn: no
-  
+  when:
+    redis_archive_keyring.stat.exists == false
+    
 - name: Install Redis
   ansible.builtin.apt:
     name: redis
+  when:
+    redis_archive_keyring.stat.exists == false
+    
