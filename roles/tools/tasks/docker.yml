@@ -24,7 +24,7 @@
     name: 
       - docker-ce={{ DOCKER_VERSION }}
       - docker-ce-cli={{ DOCKER_VERSION }}
-      - containerd.io={{ DOCKER_VERSION }}
-      - docker-compose-plugin={{ DOCKER_VERSION }}
+      - containerd.io
+      - docker-compose-plugin
   when:
     docker_repo.stat.exists == true
