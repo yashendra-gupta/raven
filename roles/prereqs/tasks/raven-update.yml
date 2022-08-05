@@ -10,7 +10,7 @@
 
 - name: Add Raven update to the shell environment
   copy:
-    src: "{{ role_path }}/files/bashrc/raven-update.bashrc"
+    src: "{{ role_path }}/files/raven-update/raven-update.bashrc"
     dest: /home/vagrant/.bashrc.d/
     owner: vagrant
     group: vagrant
