@@ -7,3 +7,11 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
+
+- name: Add Raven update to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/raven-update.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'  
