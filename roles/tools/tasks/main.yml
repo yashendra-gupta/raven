@@ -8,5 +8,4 @@
 - import_tasks : redis.yml
 - import_tasks : postgresql.yml
 - import_tasks : pgadmin.yml
-
-
+- import_tasks : docker.yml
