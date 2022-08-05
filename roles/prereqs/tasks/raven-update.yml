@@ -27,5 +27,5 @@
 - name: Create cron job to check for updates
   ansible.builtin.cron:
     name: "raven-update-checker"
-    job: "raven-update-check >> /opt/log/raven-update-check.log"
+    job: "/opt/development/bin/raven-update/raven-update-checker.sh >> /opt/log/raven-update-check.log"
     user: vagrant
