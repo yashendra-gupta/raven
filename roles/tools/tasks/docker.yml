@@ -27,4 +27,4 @@
       - containerd.io
       - docker-compose-plugin
   when:
-    docker_repo.stat.exists == true
+    docker_repo.stat.exists == false
