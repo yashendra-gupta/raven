@@ -7,4 +7,6 @@
 - import_tasks : intellij-idea-ic.yml
 - import_tasks : redis.yml
 - import_tasks : postgresql.yml
+- import_tasks : pgadmin.yml
+
 
