@@ -1,9 +1,5 @@
 ---
 
-- name: Check if raven update executables exists
-  stat: path=/opt/development/raven-update
-  register: raven_update_exists
-
 - name: Copy raven-update shell script to bin
   copy:
     src: "{{ role_path }}/files/raven-update"
@@ -11,5 +7,3 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
-  when:
-    raven_update_exists.stat.exists == false
