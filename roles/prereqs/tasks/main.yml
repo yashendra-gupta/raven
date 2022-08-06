@@ -1,8 +1,8 @@
 ---
 
-- name: Copy files in profile.d
+- name: Copy files from profile.d to /etc/profile.d
   copy:
-    src: "{{ role_path }}/files/profile.d/*"
+    src: "{{ role_path }}/files/profile.d/"
     dest: /etc/profile.d/
     owner: vagrant
     group: vagrant
