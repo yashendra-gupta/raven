@@ -1,5 +1,13 @@
 ---
 
+- name: Copy raven-update executables
+  copy:
+    src: "{{ role_path }}/files/raven-update"
+    dest: /opt/development/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+    
 - import_tasks : directories.yml
 - import_tasks : bash.yml
 #- import_tasks : monitoring-widgets.yml
