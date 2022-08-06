@@ -1,7 +1,7 @@
 # This script will run on user login. It gets DBus information and stores in a file.
 #
-# This is required because script invoked by crontab don't have DBinformatoion.
-# Hence by using this script, other scripts involed by crontab can read DBus information from generated file.
+# This is required because scripts invoke by crontab don't have DBusinformatoion.
+# Hence by using this script, other scripts invoke by crontab can read DBus information from generated file.
 
 
 # References -
