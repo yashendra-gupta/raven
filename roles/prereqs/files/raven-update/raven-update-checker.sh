@@ -18,8 +18,6 @@ if [ -r ~/.dbus/Xdbus ]; then
   source ~/.dbus/Xdbus
 fi
 
-
-
 if  [ -d /opt/development/raven ]
 then
         echo "Directory exist...will fetch"
@@ -29,7 +27,7 @@ then
 
         diffCount=$(git rev-list --count main..origin/main)
         echo "Diff Count =  $diffCount"
-        notify-send -t 10000  "Raven Updates" "$diffCount new update(s) available"
+        notify-send -t 10000 --hint=string:desktop-entry:org.kde.dolphin "Raven Updates" "$diffCount new update(s) available"
 else
         echo "cloning"
         error=/usr/bin/git git clone git@github.com:yashendra-gupta/raven.git
