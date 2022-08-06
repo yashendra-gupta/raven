@@ -9,6 +9,11 @@
 # https://unix.stackexchange.com/questions/111188/using-notify-send-with-cron/111190#111190
 # https://unix.stackexchange.com/questions/162856/is-revealing-dbus-session-bus-address-variable-a-vulnerability
 
+
+if [ ! -d "$HOME/.dbus" ]; then
+  mkdir .dbus
+fi
+
 !/bin/sh
 touch $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus
