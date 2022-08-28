@@ -33,3 +33,11 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
+    
+- name: Copy ideac.desktop 
+  ansible.builtin.file:
+    src: ideac.desktop
+    dest: /opt/development/bin/
+    state: link
+    owner: root
+    group: root    
