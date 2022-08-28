@@ -39,3 +39,4 @@
     name: "raven-update-checker"
     job: "/opt/development/bin/raven-update/raven-update-checker.sh >> /opt/log/raven-update-check.log"
     user: vagrant
+    hour: "*/1" # runs every 1 hour
