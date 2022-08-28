@@ -35,9 +35,8 @@
     mode: '0755'
     
 - name: Add ideac.desktop 
-  ansible.builtin.file:
+  copy:
     src: "{{ role_path }}/files/ideac.desktop"
     dest: /opt/development/bin/
-    state: link
     owner: root
     group: root    
