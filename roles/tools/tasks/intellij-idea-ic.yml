@@ -34,9 +34,9 @@
     group: vagrant
     mode: '0755'
     
-- name: Copy ideac.desktop 
+- name: Add ideac.desktop 
   ansible.builtin.file:
-    src: ideac.desktop
+    src: "{{ role_path }}/files/ideac.desktop"
     dest: /opt/development/bin/
     state: link
     owner: root
