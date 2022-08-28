@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=ideac
+Exec=/opt/development/bin/intellij_idea_ic/bin/idea.sh
+Icon=/opt/development/bin/intellij_idea_ic/bin/idea.svg
