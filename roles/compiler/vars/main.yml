@@ -13,5 +13,5 @@ nodejs_download_url : https://nodejs.org/dist/{{nodejs_version}}/node-{{nodejs_v
 
 
 # NodeJS
-golang_version : "go.1.19"
+golang_version : "go1.19"
 golang_download_url : https://dl.google.com/go/{{golang_version}}.linux-amd64.tar.gz
