@@ -1,3 +1,3 @@
 export VSCODE_HOME=/opt/development/bin/vscode
-export VSCODE=$VSCODE_HOME/code
-export PATH=$PATH:$VSCODE
+export VSCODE_BIN=$VSCODE_HOME/bin/
+export PATH=$PATH:$VSCODE_BIN
