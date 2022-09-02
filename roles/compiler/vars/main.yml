@@ -10,3 +10,8 @@ maven_version: "3.8.1"
 # NodeJS
 nodejs_version : "v16.16.0"
 nodejs_download_url : https://nodejs.org/dist/{{nodejs_version}}/node-{{nodejs_version}}-linux-x64.tar.xz
+
+
+# NodeJS
+golang_version : "go.1.19"
+golang_download_url : https://dl.google.com/go/{{golang_version}}.linux-amd64.tar.gz
