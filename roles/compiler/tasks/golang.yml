@@ -22,7 +22,9 @@
 # So rename directory with version, to have multiple version of golang in future.
 - name: Rename folder from "go" to "golang_version.linux-amd64"
   ansible.builtin.command: mv /opt/development/go /opt/development/{{golang_version}}.linux-amd64
-
+  when:
+    golang_exists.stat.exists == false
+    
 - name: Link golang to development bin
   ansible.builtin.file:
     src: /opt/development/{{golang_version}}.linux-amd64/
