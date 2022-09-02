@@ -1,0 +1,35 @@
+---
+
+- name: Check if golang exists
+  stat: path=/opt/development/{{golang_version}}.linux-amd64
+  register: golang_exists
+
+- name: Download golang
+  get_url: 
+    url: "{{golang_download_url}}"
+    dest: /tmp/{{golang_version}}.linux-amd64.tar.gz
+  when:
+    golang_exists.stat.exists == false
+
+- name: Unpack golang
+  unarchive:
+    src: /tmp/{{golang_version}}.linux-amd64.tar.gz
+    dest: /opt/development
+  when:
+    golang_exists.stat.exists == false
+
+- name: Link golang to development bin
+  ansible.builtin.file:
+    src: /opt/development/{{golang_version}}.linux-amd64/
+    dest: /opt/development/bin/golang
+    state: link
+    owner: root
+    group: root
+
+- name: Add golang to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/golang.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'   
