@@ -13,7 +13,7 @@ Raven is a full stack development environment using Ansible. It contains playboo
   ```shell
   cat .ssh/id_rsa.pub
   ```
-- Pull ansible and run playbook to setup your environment
+- Run ansible playbook to setup the environment
   ```shell
   sudo -E ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa"  --url="git@github.com:yashendra-gupta/raven.git" local.yml
   ```
