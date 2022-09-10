@@ -8,6 +8,14 @@
     group: vagrant
     mode: '0755'
 
+- name: Customize shell prompt
+  copy:
+    src: "{{ role_path }}/files/shell-prompt.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+    
 - name: Include bashrc files
   ansible.builtin.blockinfile:
     path: ~/.bashrc
@@ -20,13 +28,7 @@
           source "${file}"
         done
       fi
-      
-      # Customize shell prompt
-      # https://github.com/yashendra-gupta/journal-devops/blob/master/linux/customize/customize-shell-prompt.md     
-      export GIT_PS1_SHOWDIRTYSTATE=true
-      export GIT_PS1_SHOWUNTRACKEDFILES=true
-      export PS1='\[\033[1;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\] \$' 
-      
+            
 - name: Add raven cow file
   copy:
     src: "{{ role_path }}/files/raven.cow"
