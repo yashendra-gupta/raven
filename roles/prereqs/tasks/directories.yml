@@ -39,3 +39,11 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
+    
+- name: Create a workspace directory if it does not exist
+  ansible.builtin.file:
+    path: /home/vagrant/workspace
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
