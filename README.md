@@ -40,6 +40,8 @@ You can also use below commands :
 - Use `ideac` command to launch IntelliJ IDEA communitiy edition
 - Use `jmc` command to launch Java Mission Control
 
+![image](https://user-images.githubusercontent.com/40363062/189495924-ca5d2300-3818-46ac-8723-88d417f1ad2c.png)
+
 # Troubleshoot
 
 1. On fresh installation post anisble play, somtimes machine might not start. To resolve, just do clean installation again.
