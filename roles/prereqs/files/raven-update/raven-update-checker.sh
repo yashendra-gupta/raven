@@ -25,8 +25,8 @@ then
 
         FETCH=/usr/bin/git git fetch --all
 
-        diffCount=$(git rev-list --count master..origin/master)
-        echo "Diff Count =  $diffCount"
+        diffCount=$(git rev-list --count $RAVEN_UPDATE_BRANCH..origin/$RAVEN_UPDATE_BRANCH)
+        printf "\033[0;32mRaven updates : $diffCount new updates available !!\n"
         notify-send -t 10000 --hint=string:desktop-entry:org.kde.dolphin "Raven Updates" "$diffCount new update(s) available"
 else
         echo "cloning"

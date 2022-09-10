@@ -13,9 +13,15 @@ Raven is a full stack development environment using Ansible. It contains playboo
   ```shell
   cat .ssh/id_rsa.pub
   ```
-- Run ansible playbook to setup the environment
+- Set RAVEN_UPDATE_BRANCH
   ```shell
-  sudo -E ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa"  --url="git@github.com:yashendra-gupta/raven.git" local.yml
+  export RAVEN_UPDATE_BRANCH=master
+  ```
+- Run ansible playbook to setup the environment
+ 
+  **Note:** In absence of `--checkout` option in `ansible-pull`, `ansible-pull` uses Git's default branch
+  ```shell
+  sudo -E ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa"  --url="git@github.com:yashendra-gupta/raven.git" --checkout=$RAVEN_UPDATE_BRANCH local.yml
   ```
   ![image](https://user-images.githubusercontent.com/40363062/189417681-b3d83862-d2a2-4fa8-b6a2-ded78483143d.png)
 
