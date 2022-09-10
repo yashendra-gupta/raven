@@ -13,7 +13,8 @@ Note: Just KDE/Ubuntu desktops can tak1-2hrs to complete, as their size is big.
 
 **A.** This may be due to .bashrc has not picked lates changes, so try to logging off from machine and login again.
 
-**Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ?*** (Very first time when setting up box)
+**Q. *Audio not working? Is audio icon show disabled and in system settings -> audio-> there is "dummy output" ?*** (Very first time when setting up box) 
+> Issue has been raised for this https://github.com/yashendra-gupta/raven/issues/2
 
 Virtual Box settings: ![image](https://user-images.githubusercontent.com/40363062/182923068-9e55096a-e21e-4d74-95cc-05b77ecfef52.png)
 

@@ -40,4 +40,3 @@ You can also use below commands :
 3. On launchin chrome, cancel 
 ![image](https://user-images.githubusercontent.com/40363062/182890348-a9a78549-5792-4f45-b7c6-3c808bc90ace.png)
 4. On fresh installation post ansible play, desktop screen may flicker. To resolve this, just close virtual box and reopen.
-5. On fresh installation post ansible play, `raven-update` could not update `raven` project and throws that no raven git project found local. This may be due to git known hosts not set issue. Note : This raven project should have been created by `raven-update-check` and supposed to be exist in the specified location so that `git fetch` can work on `raven-update`, but because known-host requires interaction from user, clone failed which resulted in cascade failure. [TODO: Check how to execute git clone in non-interactive shell]
