@@ -1,0 +1,30 @@
+---
+
+- name: Copy files from profile.d to /etc/profile.d
+  copy:
+    src: "{{ role_path }}/files/profile.d/"
+    dest: /etc/profile.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Include bashrc files
+  ansible.builtin.blockinfile:
+    path: ~/.bashrc
+    block: |
+      # Source bashrc files
+      if [ -d ${HOME}/.bashrc.d ]
+      then
+        for file in ~/.bashrc.d/*.bashrc
+        do
+          source "${file}"
+        done
+      fi
+
+- name: Add raven cow file
+  copy:
+    src: "{{ role_path }}/files/raven.cow"
+    dest: /usr/share/cowsay/cows
+    owner: vagrant
+    group: vagrant
+    mode: '0755'

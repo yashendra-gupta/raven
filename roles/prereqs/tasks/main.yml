@@ -1,14 +1,7 @@
 ---
 
-- name: Copy files from profile.d to /etc/profile.d
-  copy:
-    src: "{{ role_path }}/files/profile.d/"
-    dest: /etc/profile.d/
-    owner: vagrant
-    group: vagrant
-    mode: '0755'
-    
+- import_tasks : package.yml
 - import_tasks : directories.yml
-- import_tasks : bash.yml
+- import_tasks : configure.yml
 #- import_tasks : monitoring-widgets.yml
 - import_tasks : raven-update.yml

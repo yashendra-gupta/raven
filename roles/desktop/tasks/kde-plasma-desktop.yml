@@ -3,7 +3,9 @@
 - name: Install KDE desktop(kde-plasma-desktop)
   apt: name="kde-plasma-desktop"
 
-- name: Install libnotify-bin to generate notification
+- name: Install KDE desktop related packages
   ansible.builtin.apt:
     update_cache: yes 
-    name: libnotify-bin
+    pkg:
+    - libnotify-bin # To generate notification
+    - ark # To get extract zip option in context menu
