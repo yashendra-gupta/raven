@@ -29,9 +29,16 @@ You can also use below commands :
 - `raven-update-check` to check if there are any updates
 - `raven-update` to update the Raven with latest configuration
 
+## Shell Prompt
+- If directory is Git project, then shell prompt also display Git's current branch followed by optional symbols :
+  - `*` : indicates that there are changes but not staged for commit
+  - `+` : indicates that there are changes but staged for commit
+  - `+` : indicates that there are untracked files
+
 ## Command
 - Use `code` command to launch Visual Studio code
 - Use `ideac` command to launch IntelliJ IDEA communitiy edition
+- Use `jmc` command to launch Java Mission Control
 
 # Troubleshoot
 
