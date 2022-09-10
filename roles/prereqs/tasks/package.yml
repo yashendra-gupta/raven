@@ -4,4 +4,5 @@
   ansible.builtin.apt:
     update_cache: yes
     pkg:
+    - virtualbox-guest-x11 # https://github.com/yashendra-gupta/raven/issues/11
     - cowsay
