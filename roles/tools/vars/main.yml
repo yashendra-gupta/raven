@@ -22,3 +22,7 @@ intellij_idea_ic_download_url: https://download-cdn.jetbrains.com/idea/ideaIC-20
 
 # Docker
 DOCKER_VERSION: "5:20.10.16~3-0~ubuntu-jammy"
+
+# Java Mission Control
+jmc_version: "jmc-8.2.1_linux-x64"
+jmc_download_url: https://download.java.net/java/GA/jmc8/03/binaries/{{jmc_version}}.tar.gz

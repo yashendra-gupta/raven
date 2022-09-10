@@ -10,7 +10,7 @@
 
 - name: Customize shell prompt
   copy:
-    src: "{{ role_path }}/files/shell-prompt.bashrc"
+    src: "{{ role_path }}/files/bashrc/shell-prompt.bashrc"
     dest: /home/vagrant/.bashrc.d/
     owner: vagrant
     group: vagrant

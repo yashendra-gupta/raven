@@ -1,0 +1,35 @@
+---
+
+- name: Check if JMC Community exists
+  stat: path=/opt/development/jmc-{{jmc_version}}
+  register: jmc_exists
+
+- name: Download JMC
+  get_url: 
+    url: "{{jmc_download_url}}"
+    dest: /tmp/jmc-{{jmc_version}}.tar.gz
+  when:
+    jmc_exists.stat.exists == false
+
+- name: Unpack JMC
+  unarchive:
+    src: /tmp/jmc-{{jmc_version}}.tar.gz
+    dest: /opt/development
+  when:
+    jmc_exists.stat.exists == false
+
+- name: Link JMC to development bin
+  ansible.builtin.file:
+    src: /opt/development/jmc-{{jmc_version}}
+    dest: /opt/development/bin/jmc
+    state: link
+    owner: root
+    group: root
+    
+- name: Add JMC to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/jmc.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
