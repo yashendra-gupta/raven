@@ -25,7 +25,7 @@ then
 
         FETCH=/usr/bin/git git fetch --all
 
-        diffCount=$(git rev-list --count main..origin/main)
+        diffCount=$(git rev-list --count main..origin/master)
         echo "Diff Count =  $diffCount"
         notify-send -t 10000 --hint=string:desktop-entry:org.kde.dolphin "Raven Updates" "$diffCount new update(s) available"
 else
