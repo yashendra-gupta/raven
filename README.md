@@ -34,13 +34,13 @@ You can also use below commands :
   - `*` : indicates that there are changes but not staged for commit
   - `+` : indicates that there are changes but staged for commit
   - `+` : indicates that there are untracked files
+  
+  ![image](https://user-images.githubusercontent.com/40363062/189495924-ca5d2300-3818-46ac-8723-88d417f1ad2c.png)
 
 ## Command
 - Use `code` command to launch Visual Studio code
 - Use `ideac` command to launch IntelliJ IDEA communitiy edition
 - Use `jmc` command to launch Java Mission Control
-
-![image](https://user-images.githubusercontent.com/40363062/189495924-ca5d2300-3818-46ac-8723-88d417f1ad2c.png)
 
 # Troubleshoot
 
