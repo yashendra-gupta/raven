@@ -1,49 +1,11 @@
 ---
 
-- name: Create a Development directory if it does not exist
+- name: Create directories, if it does not exist
   ansible.builtin.file:
-    path: /opt/development
+    path: "{{ item }}"
     state: directory
     owner: vagrant
     group: vagrant
     mode: '0755'
-
-- name: Create a bin for Development directory if it does not exist
-  ansible.builtin.file:
-    path: /opt/development/bin
-    state: directory
-    owner: vagrant
-    group: vagrant
-    mode: '0755'    
-
-- name: Create a log directory under /opt, if it does not exist
-  ansible.builtin.file:
-    path: /opt/log
-    state: directory
-    owner: vagrant
-    group: vagrant
-    mode: '0755' 
-    
-- name: Create a bashrc directory if it does not exist
-  ansible.builtin.file:
-    path: ~/.bashrc.d
-    state: directory
-    owner: vagrant
-    group: vagrant
-    mode: '0755'    
-    
-- name: Creates a bin directory under home directory of Vagrant user, if it does not exist
-  ansible.builtin.file:
-    path: /home/vagrant/bin
-    state: directory
-    owner: vagrant
-    group: vagrant
-    mode: '0755'
-    
-- name: Create a workspace directory if it does not exist
-  ansible.builtin.file:
-    path: /home/vagrant/workspace
-    state: directory
-    owner: vagrant
-    group: vagrant
-    mode: '0755'
+  loop:
+    - "{{ directories }}"

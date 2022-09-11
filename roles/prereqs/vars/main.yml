@@ -1,0 +1,13 @@
+---
+
+# List of directories to create
+directories:
+  - "/opt/development" # development directory
+  - "/opt/development/bin" # bin for development directory
+  - "/opt/packages" # For storing packages/software
+  - "/opt/packages/extras" # For storing unpacked additional versions of packages/software stored in /opt/packages or /opt/development
+  - "/opt/packages/extras/raw" # For storing original files tar, zips, deb, etc
+  - "/opt/log" # log directory under /opt
+  - "~/.bashrc.d" # bashrc directory
+  - "/home/vagrant/bin" # bin directory under home directory of Vagrant user
+  - "/home/vagrant/workspace" # workspace directory
