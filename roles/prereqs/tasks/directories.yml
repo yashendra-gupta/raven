@@ -1,23 +1,49 @@
 ---
 
-- name: Create directories, if it does not exist
+- name: Create a Development directory if it does not exist
   ansible.builtin.file:
-    path: "{{ item }}"
+    path: /opt/development
     state: directory
     owner: vagrant
     group: vagrant
-    recurse: yes
-    follow: no # https://github.com/ansible/ansible/issues/39802, https://github.com/ansible/ansible/issues/77790
-  loop:
-    # /opt/development <=  development directory
-    # /opt/development/bin <= bin for development directory
-    - /opt/development/bin
-    # "/opt/develop/packages" <= For storing packages/software
-    # "/opt/develop/packages/extras" <= For storing unpacked additional versions of packages/software stored in /opt/develop/packages
-    # "/opt/develop/packages/extras/raw" <= For storing original files tar, zips, deb, etc
-    - /opt/develop/packages/bin
-    - /opt/develop/packages/extras/raw
-    - /opt/develop/log # log directory under /opt
-    - ~/.bashrc.d # bashrc directory
-    - /home/vagrant/bin # bin directory under home directory of Vagrant user
-    - /home/vagrant/workspace # workspace directory
+    mode: '0755'
+
+- name: Create a bin for Development directory if it does not exist
+  ansible.builtin.file:
+    path: /opt/development/bin
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Create a log directory under /opt, if it does not exist
+  ansible.builtin.file:
+    path: /opt/log
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Create a bashrc directory if it does not exist
+  ansible.builtin.file:
+    path: ~/.bashrc.d
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Creates a bin directory under home directory of Vagrant user, if it does not exist
+  ansible.builtin.file:
+    path: /home/vagrant/bin
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Create a workspace directory if it does not exist
+  ansible.builtin.file:
+    path: /home/vagrant/workspace
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
