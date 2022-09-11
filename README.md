@@ -39,7 +39,7 @@ You can also use below commands :
 - If directory is Git project, then shell prompt also display Git's current branch followed by optional symbols :
   - `*` : indicates that there are changes but not staged for commit
   - `+` : indicates that there are changes but staged for commit
-  - `+` : indicates that there are untracked files
+  - `%` : indicates that there are untracked files
   
   ![image](https://user-images.githubusercontent.com/40363062/189495924-ca5d2300-3818-46ac-8723-88d417f1ad2c.png)
 
