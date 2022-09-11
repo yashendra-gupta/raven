@@ -9,13 +9,15 @@
     mode: '0755'
     recurse: yes
   loop:
-    - /opt/development # development directory
-    - /opt/development/bin # bin for development directory
-    # "/opt/packages" <= For storing packages/software
-    # "/opt/packages/extras" <= For storing unpacked additional versions of packages/software stored in /opt/packages or /opt/development
-    # "/opt/packages/extras/raw" <= For storing original files tar, zips, deb, etc
-    - /opt/packages/extras/raw
-    - /opt/log # log directory under /opt
+    # /opt/development <=  development directory
+    # /opt/development/bin <= bin for development directory
+    - /opt/development/bin
+    # "/opt/develop/packages" <= For storing packages/software
+    # "/opt/develop/packages/extras" <= For storing unpacked additional versions of packages/software stored in /opt/develop/packages
+    # "/opt/develop/packages/extras/raw" <= For storing original files tar, zips, deb, etc
+    - /opt/develop/packages/bin
+    - /opt/develop/packages/extras/raw
+    - /opt/develop/log # log directory under /opt
     - ~/.bashrc.d # bashrc directory
     - /home/vagrant/bin # bin directory under home directory of Vagrant user
     - /home/vagrant/workspace # workspace directory
