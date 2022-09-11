@@ -48,6 +48,10 @@ You can also use below commands :
 - Use `ideac` command to launch IntelliJ IDEA communitiy edition
 - Use `jmc` command to launch Java Mission Control
 
+## Adding shared folders
+![image](https://user-images.githubusercontent.com/40363062/189506145-932ae1c5-7b01-491a-85da-ec07d02918e1.png)
+
+
 # Troubleshoot
 
 1. On fresh installation post anisble play, somtimes machine might not start. To resolve, just do clean installation again.
