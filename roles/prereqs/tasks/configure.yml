@@ -1,5 +1,11 @@
 ---
 
+- name: Add user to the vboxsf group within the guest VM.
+  ansible.builtin.shell: |
+    # https://stackoverflow.com/questions/26740113/virtualbox-shared-folder-permissions
+    # Note: Requires virtualbox-guest-x11 to be installed. As vboxsf group will exist only post installation 
+    sudo adduser $USER vboxsf 
+
 - name: Copy files from profile.d to /etc/profile.d
   copy:
     src: "{{ role_path }}/files/profile.d/"
