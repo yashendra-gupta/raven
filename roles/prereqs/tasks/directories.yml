@@ -7,5 +7,6 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
+    recurse: yes
   loop:
     - "{{ directories }}"
