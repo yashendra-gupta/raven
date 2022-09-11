@@ -5,7 +5,7 @@
 - name:  Add user to the vboxsf group within the guest VM.
   user:
     name: '{{ user }}'
-    groups: sudo
+    groups: vboxsf
     append: yes
     
 - name: Copy files from profile.d to /etc/profile.d
