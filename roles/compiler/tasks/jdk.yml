@@ -33,3 +33,11 @@
     owner: vagrant
     group: vagrant
     mode: '0755' 
+
+- name: Add switch-jdk program
+  copy:
+    src: "{{ role_path }}/files/switch/switch-jdk.sh"
+    dest: /home/vagrant/bin/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
