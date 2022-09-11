@@ -35,6 +35,10 @@ You can also use below commands :
 - `raven-update-check` to check if there are any updates
 - `raven-update` to update the Raven with latest configuration
 
+## Developing Raven
+- To develop raven clone this repository and start working on it.
+- Test your changes, by running `sudo ansible-playbook ./local.yml` from project's root directory
+
 ## Shell Prompt
 - If directory is Git project, then shell prompt also display Git's current branch followed by optional symbols :
   - `*` : indicates that there are changes but not staged for commit
