@@ -4,7 +4,7 @@
 # Note: Requires virtualbox-guest-x11 to be installed. As vboxsf group will exist only post installation 
 - name:  Add user to the vboxsf group within the guest VM.
   user:
-    name: '{{ user }}'
+    name: vagrant
     groups: vboxsf
     append: yes
     
