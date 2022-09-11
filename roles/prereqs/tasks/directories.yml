@@ -8,6 +8,7 @@
     group: vagrant
     mode: '0755'
     recurse: yes
+    follow: no # https://github.com/ansible/ansible/issues/39802, https://github.com/ansible/ansible/issues/77790
   loop:
     # /opt/development <=  development directory
     # /opt/development/bin <= bin for development directory
