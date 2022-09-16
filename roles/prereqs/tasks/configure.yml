@@ -36,7 +36,15 @@
           source "${file}"
         done
       fi
-            
+
+- name: Add inputrc file
+  copy:
+    src: "{{ role_path }}/files/inputrc/.inputrc"
+    dest: /home/vagrant
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
 - name: Add raven cow file
   copy:
     src: "{{ role_path }}/files/raven.cow"
