@@ -34,7 +34,7 @@ post_raven_update () {
     else
       local switch_version_to=$( echo $CURRENT_JDK_VERSION | cut -d \. -f 1 )
       echo "switch-jdk-$switch_version_to"
-      switch-jdk.sh switch_version_to
+      switch-jdk.sh $switch_version_to
     fi
   fi
 
