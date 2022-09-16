@@ -10,3 +10,11 @@
     pkg:
     - libnotify-bin # To generate notification
     - ark # To get extract zip option in context menu
+
+- name: Configure monitoring widgets
+  copy:
+    src: "{{ role_path }}/files/widgets/plasma-org.kde.plasma.desktop-appletsrc"
+    dest: "/home/vagrant/.config/plasma-org.kde.plasma.desktop-appletsrc"
+    owner: vagrant
+    group: vagrant
+    mode: '0755'

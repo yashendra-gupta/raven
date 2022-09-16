@@ -3,5 +3,4 @@
 - import_tasks : package.yml
 - import_tasks : directories.yml
 - import_tasks : configure.yml
-#- import_tasks : monitoring-widgets.yml
 - import_tasks : raven-update.yml
