@@ -51,7 +51,13 @@ post_raven_update () {
 do_raven_update () {
   printf "\n\033[0;32mSTART: \033[0;00m RAVEN UPDATE \n\n"
 
-  sudo -E ANSIBLE_FORCE_COLOR=true ANSIBLE_COW_SELECTION=raven ansible-pull --accept-host-key --private-key="/home/vagrant/.ssh/id_rsa" --url="git@github.com:yashendra-gupta/raven.git" --checkout=$RAVEN_UPDATE_BRANCH local.yml
+  sudo \
+    -E ANSIBLE_FORCE_COLOR=true ANSIBLE_COW_SELECTION=raven \
+    ansible-pull --accept-host-key \
+    --private-key="/home/vagrant/.ssh/id_rsa" \
+    --url="git@github.com:yashendra-gupta/raven.git" \
+    --checkout=$RAVEN_UPDATE_BRANCH \
+    local.yml
 
   printf "\n\033[0;32mEND: \033[0;00m RAVEN UPDATE \n\n"
 }
