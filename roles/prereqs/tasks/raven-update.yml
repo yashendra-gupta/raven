@@ -37,6 +37,6 @@
 - name: Create cron job to check for updates
   ansible.builtin.cron:
     name: "raven-update-checker"
-    job: "/opt/development/bin/raven-update/raven-update-checker.sh >> /opt/log/raven-update-check.log"
+    job: "/opt/development/bin/raven-update/raven-update-checker.sh >> /opt/develop/log/raven-update-check.log"
     user: vagrant
     minute: "0" # crontab expression( 0 * * * *) tells to runs every 1 hour
