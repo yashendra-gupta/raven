@@ -2,9 +2,7 @@
 # Install KDE desktop env.
 - name: Install KDE desktop(kde-plasma-desktop)
   ansible.builtin.apt:
-    name: kde-plasma-desktop=5.24.6
-    state: present
-    allow_downgrade: yes
+    name: kde-plasma-desktop=5.24.4
 
 - name: Install KDE desktop related packages
   ansible.builtin.apt:
