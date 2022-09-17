@@ -94,7 +94,7 @@ plugin=org.kde.plasma.systemmonitor
 PreloadWeight=100
 
 [Containments][2][Applets][44][Configuration][Appearance]
-chartFace=org.kde.ksysguard.linechart
+chartFace=org.kde.ksysguard.piechart
 title=Individual Core Usage
 
 [Containments][2][Applets][44][Configuration][ConfigDialog]
