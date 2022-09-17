@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -r RAVEN_UPDATE_BRANCH = "${RAVEN_UPDATE_BRANCH:="master"}"
+declare -r RAVEN_UPDATE_BRANCH="${RAVEN_UPDATE_BRANCH:="master"}"
 
 # For notify-send to work, set DBUS_SESSION_BUS_ADDRESS
 # Refer
