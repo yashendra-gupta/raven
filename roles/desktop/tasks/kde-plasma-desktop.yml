@@ -13,7 +13,7 @@
 
 - name: Configure monitoring widgets
   copy:
-    src: "{{ role_path }}/files/widgets/plasma-org.kde.plasma.desktop-appletsrc"
+    src: "{{ role_path }}/files/taskbar/style-2/plasma-org.kde.plasma.desktop-appletsrc"
     dest: "/home/vagrant/.config/plasma-org.kde.plasma.desktop-appletsrc"
     owner: vagrant
     group: vagrant
