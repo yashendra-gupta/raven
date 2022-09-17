@@ -1,5 +1,7 @@
 #!/bin/bash
 
+declare -r RAVEN_UPDATE_BRANCH = "${RAVEN_UPDATE_BRANCH:="master"}"
+
 # For notify-send to work, set DBUS_SESSION_BUS_ADDRESS
 # Refer
 #   - https://stackoverflow.com/a/33723614
@@ -10,7 +12,6 @@
 #pid=$(pgrep -u $username dolphin)
 #dbus=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$pid/environ | tr '\0' '\n' | sed 's/DBUS_SESSION_BUS_ADDRESS=//' )
 #export DBUS_SESSION_BUS_ADDRESS=$dbus
-
 
 # This is required because crontab does not have DBus information.
 # Below line will look for ~/.dbus/Xdbus for DBus information written by script "/etc/profil.d/create-dbus-info.sh"

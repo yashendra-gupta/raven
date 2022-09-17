@@ -1,9 +1,8 @@
 #!/bin/bash
 
+declare -r RAVEN_UPDATE_BRANCH = "${RAVEN_UPDATE_BRANCH:="master"}"
 declare -r TIME=$( date +%s )
-
 declare -r CURRENT_WORKING_DIRECTORY=$(pwd)
-
 # JDK 8 does not have --version option, otherwise could have used simpler way getting version
 # Code: declare -r CURRENT_JDK_VERSION=$(java -version 2>&1 | head -n 1 | cut -d\" -f 2)
 # Also, above JDK8, java has options -
