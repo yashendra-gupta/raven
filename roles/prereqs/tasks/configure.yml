@@ -52,3 +52,18 @@
     owner: vagrant
     group: vagrant
     mode: '0755'
+
+- name: Add Raven startup script
+  copy:
+    src: "{{ role_path }}/files/.raven-startup.sh"
+    dest: /opt/develop/packages/bin
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Add cron job to execute Raven startup script on boot
+  ansible.builtin.cron:
+    name: "Raven Startup"
+    special_time: reboot
+    job: "/opt/develop/packages/bin/.raven-startup.sh"
+    user: vagrant
