@@ -67,3 +67,19 @@
     special_time: reboot
     job: "/opt/develop/packages/bin/.raven-startup.sh"
     user: vagrant
+
+- name: Add Raven Audio Fixer script
+  copy:
+    src: "{{ role_path }}/files/.raven-audio-fixer.sh"
+    dest: /opt/develop/packages/bin
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Add Raven Audio Fixer to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/raven-audio-fixer.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
