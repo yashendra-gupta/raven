@@ -1,8 +1,10 @@
 ---
 
 # Eclipse
-eclipse_version: "2021-09-R"
-eclipse_download_url: https://archive.eclipse.org/technology/epp/downloads/release/2021-09/R/eclipse-jee-2021-09-R-linux-gtk-x86_64.tar.gz
+eclipse_version_date: "2023-09"
+eclipse_version_suffix: "RC1"
+eclipse_version: "{{ eclipse_version_date }}-{{ eclipse_version_suffix }}"
+eclipse_download_url: https://archive.eclipse.org/technology/epp/downloads/release/{{eclipse_version_date}}/{{eclipse_version_suffix}}/eclipse-jee-{{eclipse_version}}-linux-gtk-x86_64.tar.gz
 
 # VS Code
 vscode_version_identifier: "1655263335"
