@@ -28,7 +28,12 @@ then
 
         diffCount=$(git rev-list --count $RAVEN_UPDATE_BRANCH..origin/$RAVEN_UPDATE_BRANCH)
         printf "\033[0;32mRaven updates : $diffCount new updates available !!\n"
-        notify-send -t 10000 --hint=string:desktop-entry:org.kde.dolphin "Raven Updates" "$diffCount new update(s) available"
+
+        if [[ $diffCount -gt 0 ]]
+        then
+                notify-send -t 10000 --hint=string:desktop-entry:org.kde.dolphin "Raven Updates" "$diffCount new update(s) available"
+        fi
+        
 else
         echo "cloning"
         error=/usr/bin/git git clone git@github.com:yashendra-gupta/raven.git
