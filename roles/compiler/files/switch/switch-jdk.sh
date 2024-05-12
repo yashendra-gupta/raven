@@ -13,6 +13,10 @@ declare -r DOWNLOAD_URL_JDK_15="https://download.java.net/java/GA/jdk15.0.2/0d1c
 declare -r DOWNLOAD_URL_JDK_16="https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
 declare -r DOWNLOAD_URL_JDK_17="https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
 declare -r DOWNLOAD_URL_JDK_18="https://download.java.net/java/GA/jdk18.0.2/f6ad4b4450fd4d298113270ec84f30ee/9/GPL/openjdk-18.0.2_linux-x64_bin.tar.gz"
+declare -r DOWNLOAD_URL_JDK_19="https://download.java.net/java/GA/jdk19.0.1/afdd2e245b014143b62ccb916125e3ce/10/GPL/openjdk-19.0.1_linux-x64_bin.tar.gz"
+declare -r DOWNLOAD_URL_JDK_20="https://download.java.net/java/GA/jdk20.0.2/6e380f22cbe7469fa75fb448bd903d8e/9/GPL/openjdk-20.0.2_linux-x64_bin.tar.gz"
+declare -r DOWNLOAD_URL_JDK_21="https://download.java.net/java/GA/jdk21.0.1/415e3f918a1f4062a0074a2794853d0d/12/GPL/openjdk-21.0.1_linux-x64_bin.tar.gz"
+declare -r DOWNLOAD_URL_JDK_22="https://download.java.net/java/GA/jdk22/830ec9fcccef480bb3e73fb7ecafe059/36/GPL/openjdk-22_linux-x64_bin.tar.gz"
 
 declare -r JDK_SYMLINK="/opt/development/bin/jdk"
 declare -r LOCATION_PACKAGES_EXTRAS="/opt/develop/packages/extras"
