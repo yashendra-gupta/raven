@@ -14,9 +14,8 @@ vscode_download_url: https://az764295.vo.msecnd.net/stable/30d9c6cd9483b2cc58668
 postman_version: "latest"
 postman_download_url: https://dl.pstmn.io/download/latest/linux64
 
-# Postman
-chrome_version: 117.0.5938.132-1
-chrome_download_url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_{{chrome_version}}_amd64.deb \
+# Chrome
+chrome_download_url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 # IntelliJ IDEA Community Edition
 intellij_idea_ic_version: "2022.1.4"
