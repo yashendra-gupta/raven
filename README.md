@@ -65,3 +65,14 @@ You can also use below commands :
 3. On launchin chrome, cancel 
 ![image](https://user-images.githubusercontent.com/40363062/182890348-a9a78549-5792-4f45-b7c6-3c808bc90ace.png)
 4. On fresh installation post ansible play, desktop screen may flicker. To resolve this, just close virtual box and reopen.
+5. If raven-update fails with error message related to apt cache, then manually run `sudo apt update` to see which registery is throwing error and if the thrown error is 
+
+    `An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://repo.mysql.com/apt/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY B7B3B788A8D3785C`
+
+    `Failed to fetch http://repo.mysql.com/apt/ubuntu/dists/focal/InRelease  The following signatures couldn't be verified because the public key is not available:  NO_PUBKEY B7B3B788A8D3785C`
+
+    then run below command -
+    
+    `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C`
+
+    Note: replace the correct key in above command based on error message showing key.
