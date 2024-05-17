@@ -8,7 +8,7 @@ jdk_download_url: https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896
 maven_version: "3.8.1"
 
 # NodeJS
-nodejs_version : "v16.16.0"
+nodejs_version : "v20.13.1"
 nodejs_download_url : https://nodejs.org/dist/{{nodejs_version}}/node-{{nodejs_version}}-linux-x64.tar.xz
 
 
