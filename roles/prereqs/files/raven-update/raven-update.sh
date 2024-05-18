@@ -66,8 +66,10 @@ main () {
 
   pre_raven_update
   do_raven_update
+  $RAVEN_BIN/raven-wallpaper.sh
   post_raven_update
 
+  
   local now=$( date +%s )
   local raven_update_completion_time=$(($now-$TIME))
 

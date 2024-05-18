@@ -1,0 +1,32 @@
+---
+
+- name: Copy wallpaper
+  copy:
+    src: "{{ role_path }}/files/raven/wallpaper"
+    dest: /opt/raven
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Add script to set Raven
+  copy:
+    src: "{{ role_path }}/files/raven/raven-wallpaper.sh"
+    dest: /opt/raven/bin
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Add command to set Raven wallpaper to the shell environment
+  copy:
+    src: "{{ role_path }}/files/bashrc/raven-wallpaper.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: Add cron job to run raven-wallpaper script on boot
+  ansible.builtin.cron:
+    name: "Raven Startup"
+    special_time: reboot
+    job: "/opt/raven/bin .raven-wallpaper.sh"
+    user: vagrant

@@ -4,3 +4,4 @@
 - import_tasks : directories.yml
 - import_tasks : configure.yml
 - import_tasks : raven-update.yml
+- import_tasks : raven-wallpaper.yml
