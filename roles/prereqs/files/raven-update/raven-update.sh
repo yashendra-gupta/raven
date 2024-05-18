@@ -65,11 +65,8 @@ main () {
   printf "\n\033[0;32mUpdating Raven...\n\n"
 
   pre_raven_update
-  
   do_raven_update
 
-  # copy raven version file
-  cp /opt/development/raven/version.txt $RAVEN_HOME/version.txt
   $RAVEN_BIN/raven-wallpaper.sh
 
   post_raven_update

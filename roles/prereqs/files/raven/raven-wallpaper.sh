@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# doing this as these env variables are not during ansible task 
+declare -r RAVEN_HOME="${RAVEN_HOME="/opt/raven"}"
+declare -r RAVEN_WALLPAPER="${RAVEN_WALLPAPER="$RAVEN_HOME/wallpaper"}"
+declare -r RAVEN_LOG="${RAVEN_LOG="$RAVEN_HOME/log"}"
+
 declare WALLPAPER_FILE_NAME=$1;
 if [ -z "$1" ]
   then

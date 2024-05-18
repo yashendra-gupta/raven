@@ -24,9 +24,3 @@
     group: vagrant
     mode: '0755'
 
-- name: Add cron job to run raven-wallpaper script on boot
-  ansible.builtin.cron:
-    name: "Raven Startup"
-    special_time: reboot
-    job: "/opt/raven/bin .raven-wallpaper.sh"
-    user: vagrant

@@ -5,3 +5,15 @@
 - import_tasks : configure.yml
 - import_tasks : raven-update.yml
 - import_tasks : raven-wallpaper.yml
+
+# playbook_dir - https://stackoverflow.com/a/76857957
+- name: Copy Raven version file
+  shell:
+    cmd: "cp {{ playbook_dir }}/version.txt /opt/raven/version.txt"
+
+# # https://stackoverflow.com/questions/22256884/not-possible-to-source-bashrc-with-ansible/27541856#27541856
+# - name: Set wallpaper
+#   shell: 
+#     cmd: "/opt/raven/bin/raven-wallpaper.sh"
+  
+  
