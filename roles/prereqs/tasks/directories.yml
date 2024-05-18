@@ -9,6 +9,12 @@
     mode: '0755'
   loop:
     - ~/.bashrc.d # bashrc directory
+    - /opt/raven/ # raven home
+    - /opt/raven/.raven # directory for raven source
+    - /opt/raven/wallpaper # directory to store raven wallpapers
+    - /opt/raven/bin
+    - /opt/raven/log
+    - /opt/raven/package # For storing packages/software
     - /opt/develop/log # log directory under /opt
     - /opt/develop/packages # For storing packages/software
     - /opt/develop/packages/bin # to hold symlinks for home or bin location of packages/software
@@ -18,3 +24,11 @@
     - /opt/development/bin # bin for development directory
     - /home/vagrant/bin # bin directory under home directory of Vagrant user
     - /home/vagrant/workspace # workspace directory
+
+- name: Add environment variables for Raven directories
+  copy:
+    src: "{{ role_path }}/files/bashrc/raven-directories.bashrc"
+    dest: /home/vagrant/.bashrc.d/
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
