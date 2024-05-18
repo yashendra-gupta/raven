@@ -4,5 +4,5 @@
 sleep 300
 killall -15 DiscoverNotifier pamac-tray-plasma msm_kde_notifier
 
-# copy rave version file
+# copy raven version file
 cp /opt/development/raven/version.txt $RAVEN_HOME/version.txt
