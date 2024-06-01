@@ -76,3 +76,4 @@ You can also use below commands :
     `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C`
 
     Note: replace the correct key in above command based on error message showing key.
+6. **Maven dependecies download issue, when Raven is on jdk 8** : If maven dependecies failing with error `InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty` then install open-jdk 8 using `apt` by running `sudo apt-get install openjdk-8-jdk`
