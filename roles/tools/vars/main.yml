@@ -1,8 +1,8 @@
 ---
 
 # Eclipse
-eclipse_version_date: "2023-09"
-eclipse_version_suffix: "RC1"
+eclipse_version_date: "2024-03"
+eclipse_version_suffix: "R"
 eclipse_version: "{{ eclipse_version_date }}-{{ eclipse_version_suffix }}"
 eclipse_download_url: https://archive.eclipse.org/technology/epp/downloads/release/{{eclipse_version_date}}/{{eclipse_version_suffix}}/eclipse-jee-{{eclipse_version}}-linux-gtk-x86_64.tar.gz
 
